@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    gruff (0.5.1)
+      rmagick
+    rake (10.4.2)
+    rmagick (2.15.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gruff
+  rake
+  rmagick

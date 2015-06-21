@@ -1,0 +1,15 @@
+Hash,Comments Count,Library Lines,Application Lines,Spec Lines,Spec Runtime
+aaaaa,0,0,0,0,0.0
+bbbbb,20,10,20,30,0.30
+ccccc,15,100,50,40,0.35
+ddddd,23,100,50,45,0.35
+eeeee,25,100,50,60,0.40
+fffff,30,120,100,200,1.30
+ggggg,30,120,100,190,1.28
+hhhhh,30,120,120,180,1.20
+iiiii,32,120,140,200,1.30
+jjjjj,30,120,180,220,2.3
+kkkkk,29,120,170,220,2.5
+lllll,30,120,180,220,1.30
+mmmmm,32,122,190,220,1.30
+nnnnn,32,122,190,200,1.35
