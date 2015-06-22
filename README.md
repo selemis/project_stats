@@ -1,1 +1,60 @@
-# project_stats
+# Project stats
+
+## Summary
+
+This is a simple projects for visualizing code metrics to simple graphs.
+
+The purpose of the project is to visualize the code metrics over the evolution of time. I assume that there is some kind of source control system and we are able to run metrics against the various commits.
+I also suppose that each commits' metrics are represented by a line in some csv files.  
+
+There is a main Rakefile that reads the data from those csv files and renders various types of graphs as pictures in png format. On top of that there is an html file that displays all those images. 
+
+## Input - csv files format
+
+For the moment there are two csv files.
+
+The first file is named **file_data.csv**.
+
+It contains the following columns:
+
+* Hash
+    * An identifier of the source control system. It could be the SHA-1 hash of a git commit or something like that.
+* Comments Count
+    * Number of lines of comments.
+* Library Lines
+    * Number of lines of code included in third party party. For example it could count the lines of code in the lib folder of a rails project.
+* Application Lines
+    * Lines of production source code.
+* Spec Lines
+    * Number of lines of spec code.
+* Spec Runtime
+    * The time it takes for the specs to run.
+    
+The second file is named **coverage_data.csv**.
+
+It contains the following columns:
+
+* Hash
+    * An identifier of the source control system. It could be the SHA-1 hash of a git commit or something like that.
+* Covered Lines
+    * Lines of production code covered by specs.
+* Total Lines
+    * Total lines of production source code.
+
+## Output - Graphs produced
+
+The types of graphs that are produced are the following
+
+* 'Lines of code' graph
+
+### 'Lines of code' graph
+
+The graph is a line graph that displays 4 lines.
+
+* One line for total lines of comments
+* One line for third party library lines of code
+* One line for total lines of production code
+* One line for total spec lines of code
+
+![Lines of code](selemis.github.com/project_stats/images/loc.png)
+

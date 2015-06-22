@@ -2,6 +2,11 @@
 
 *.png
 
+!images/coverage.png
+!images/coverage_ratio.png
+!images/loc.png
+!images/spec_run_time.png
+!images/spec_to_prod_ratio.png
 
 ### Ruby template
 *.gem
