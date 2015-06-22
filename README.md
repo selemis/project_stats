@@ -56,5 +56,4 @@ The graph is a line graph that displays 4 lines.
 * One line for total lines of production code
 * One line for total spec lines of code
 
-![Lines of code](selemis.github.com/project_stats/images/loc.png)
-
+![Lines of code](https://github.com/selemis/project_stats/raw/master/images/loc.png "Lines of code graph")
