@@ -4,12 +4,14 @@ require 'csv'
 
 task :default => :all
 
+desc 'Draw all types of graphs'
 task :all => [:draw_loc_graph,
               :draw_spec_runtime_graph,
               :draw_spec_to_prod_ratio_graph,
               :draw_coverage_ratio_graph,
               :draw_coverage]
 
+desc "Draw 'lines of code' graph"
 task :draw_loc_graph => :read_csv do
 
   comment_values = []
@@ -39,6 +41,7 @@ task :draw_loc_graph => :read_csv do
 
 end
 
+desc "Draw 'spec runtime' graph"
 task :draw_spec_runtime_graph => :read_csv do
 
   spec_run_times = []
@@ -57,6 +60,7 @@ task :draw_spec_runtime_graph => :read_csv do
 
 end
 
+desc "Draw 'spec to prod ratio' graph"
 task :draw_spec_to_prod_ratio_graph => :read_csv do
 
   spec_to_prod_ratio = []
@@ -77,6 +81,7 @@ task :draw_spec_to_prod_ratio_graph => :read_csv do
 
 end
 
+desc "Draw 'coverage ratio' graph"
 task :draw_coverage_ratio_graph => :read_coverage_csv do
 
   coverage_ratio = []
@@ -96,6 +101,7 @@ task :draw_coverage_ratio_graph => :read_coverage_csv do
 
 end
 
+desc "Draw 'coverage' graph"
 task :draw_coverage => :read_coverage_csv do
 
   covered_lines = []
