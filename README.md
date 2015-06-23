@@ -57,3 +57,30 @@ The graph is a line graph that displays 4 lines.
 * One line for total spec lines of code
 
 ![Lines of code](https://github.com/selemis/project_stats/raw/master/images/loc.png "Lines of code graph")
+
+### 'Specs runtime graph'
+
+The graph is a line graph that displays total number of seconds it takes to run the specs in each revision.
+
+![Specs runtime](https://github.com/selemis/project_stats/raw/master/images/spec_run_time.png "Specs runtime graph")
+
+### Spec to production code lines of code ratio graph
+
+The graph is a line graph that displays the ratio of number of lines of spec code to the total number of lines of production code. 
+
+![Specs to prod ratio](https://github.com/selemis/project_stats/raw/master/images/spec_to_prod_ratio.png "Specs to prod ratio graph")
+
+### 'Coverage graph'
+ 
+The graph is a line graph that contains two lines.
+
+* One line for the number of lines covered by the specs.
+* One line for the total line numbers of production code.
+
+![Coverage](https://github.com/selemis/project_stats/raw/master/images/coverage.png "Coverage graph")
+
+### 'Coverage ratio' graph
+
+The graph is a line graph that displays the ratio of the total lines covered by the specs to the total lines of production code.
+
+![Coverage ratio](https://github.com/selemis/project_stats/raw/master/images/coverage_ratio.png "Coverage ratio graph")
