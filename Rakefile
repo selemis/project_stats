@@ -18,12 +18,14 @@ task :draw_loc_graph => :read_csv do
   library_lines_values = []
   application_lines_values = []
   spec_lines_values = []
+  production_lines_values = []
 
   @data.each do |row|
     comment_values << row[1].to_f
     library_lines_values << row[2].to_f
     application_lines_values << row[3].to_f
     spec_lines_values << row[4].to_f
+    production_lines_values << (row[3].to_f + row[2].to_f)
   end
 
   graph = Gruff::Line.new
@@ -37,6 +39,7 @@ task :draw_loc_graph => :read_csv do
   graph.data('Library Lines', library_lines_values)
   graph.data('Application Lines', application_lines_values)
   graph.data('Spec Lines', spec_lines_values)
+  graph.data('Production Lines', production_lines_values)
   graph.write('loc.png')
 
 end
