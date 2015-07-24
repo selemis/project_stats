@@ -21,11 +21,11 @@ task :draw_loc_graph => :read_csv do
   production_lines_values = []
 
   @data.each do |row|
-    comment_values << row[1].to_f
-    library_lines_values << row[2].to_f
-    application_lines_values << row[3].to_f
-    spec_lines_values << row[4].to_f
-    production_lines_values << (row[3].to_f + row[2].to_f)
+    comment_values << row['Comments Count'].to_f
+    library_lines_values << row['Library Lines'].to_f
+    application_lines_values << row['Application Lines'].to_f
+    spec_lines_values << row['Spec Lines'].to_f
+    production_lines_values << (row['Application Lines'].to_f + row['Library Lines'].to_f)
   end
 
   graph = Gruff::Line.new
@@ -49,7 +49,7 @@ task :draw_spec_runtime_graph => :read_csv do
 
   spec_run_times = []
   @data.each do |row|
-    spec_run_times << row[5].to_f
+    spec_run_times << row['Spec Runtime'].to_f
   end
 
   graph = Gruff::Line.new
@@ -68,8 +68,8 @@ task :draw_spec_to_prod_ratio_graph => :read_csv do
 
   spec_to_prod_ratio = []
   @data.each do |row|
-    denom = row[2].to_i + row[3].to_i
-    val = denom != 0.0 ? (row[4].to_f / denom) : 0
+    denom = row['Library Lines'].to_i + row['Application Lines'].to_i
+    val = denom != 0.0 ? (row['Spec Lines'].to_f / denom) : 0
     spec_to_prod_ratio << val
   end
 
@@ -89,7 +89,7 @@ task :draw_coverage_ratio_graph => :read_coverage_csv do
 
   coverage_ratio = []
   @coverage.each do |row|
-    val = row[2].to_i != 0 ? (row[1].to_f / row[2].to_f) : 0
+    val = row['Total Lines'].to_i != 0 ? (row['Covered Lines'].to_f / row['Total Lines'].to_f) : 0
     coverage_ratio << val
   end
 
@@ -110,8 +110,8 @@ task :draw_coverage => :read_coverage_csv do
   covered_lines = []
   total_lines = []
   @coverage.each do |row|
-    covered_lines << row[1].to_i
-    total_lines << row[2].to_i
+    covered_lines << row['Covered Lines'].to_i
+    total_lines << row['Total Lines'].to_i
   end
 
   graph = Gruff::Line.new
