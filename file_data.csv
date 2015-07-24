@@ -1,15 +1,24 @@
-Hash,Comments Count,Library Lines,Application Lines,Spec Lines,Spec Runtime
-aaaaa,0,0,0,0,0.0
-bbbbb,20,10,20,30,0.30
-ccccc,15,100,50,40,0.35
-ddddd,23,100,50,45,0.35
-eeeee,25,100,50,60,0.40
-fffff,30,120,100,200,1.30
-ggggg,30,120,100,190,1.28
-hhhhh,30,120,120,180,1.20
-iiiii,32,120,140,200,1.30
-jjjjj,30,120,180,220,2.3
-kkkkk,29,120,170,220,2.5
-lllll,30,120,180,220,1.30
-mmmmm,32,122,190,220,1.30
-nnnnn,32,122,190,200,1.35
+Hash,Comments Count,Library Lines,Application Lines,Spec Lines,Spec Runtime,Number of Files,Commit Message
+a37caaa,2,0,8,30,0.03332,3,accounting entry validations
+f892043,2,0,8,30,0.036,3,enabling code coverage
+84af283,2,0,17,80,0.0853,4,implementing balance for account
+07a7276,2,0,29,89,0.09068,4,balance until a date
+f3e946b,2,0,66,140,0.12149,4,implementing credits / debits in progress
+7499aab,2,0,72,193,0.33683,4,calculating credits and debits until a date
+048fd53,2,0,64,192,0.17395,4,refactoring: extracted some blocks to methods in account class
+8aecd3b,2,0,64,192,0.36831,4,extracted debit credit process flow
+3ad8e36,2,0,64,138,0.17135,4,extracted account assertable
+68ea437,6,38,65,182,0.35839,5,started accounting transaction
+c7131bb,6,49,64,244,0.70627,5,saving transactions
+0303781,6,49,64,241,0.56063,5,extracted transaction spec helper methods
+106f44b,6,0,121,245,0.59214,5,Transaformed Accounting Transaction to Active Record Object
+4256a8c,8,0,127,298,1.2,5,accounting transaction requires 2 entries and a book date
+b069952,8,0,127,314,1.24,5,commented a failing test for checking later
+9647880,8,0,127,318,1.62,5,Commented tests. Looking for the correct validations
+6dfd016,11,0,147,395,0.89058,5,got debits equal credits validation for accounting transaction
+43d919d,6,0,120,388,0.93306,5,cleaned up transaction by removing place method
+965f121,6,0,118,386,1.34,5,minor refactoring
+f6c84ad,14,0,139,387,0.71424,10,started breaking case statemeth with polymorphism
+dfd37f7,7,0,164,387,0.8078,10,broke account case statements
+b1a40b5,4,0,168,387,0.72525,10,used block to eliminate duplication in account class
+0a3b747,5,0,232,387,0.71651,10,broke accounting_entry account category central check
