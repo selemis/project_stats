@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 
 *.png
+index.html
 
 !images/coverage.png
 !images/coverage_ratio.png

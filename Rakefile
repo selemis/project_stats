@@ -1,6 +1,7 @@
 require 'rake'
 require 'gruff'
 require 'csv'
+require 'erb'
 
 task :default => :all
 
@@ -9,7 +10,8 @@ task :all => [:draw_loc_graph,
               :draw_spec_runtime_graph,
               :draw_spec_to_prod_ratio_graph,
               :draw_coverage_ratio_graph,
-              :draw_coverage]
+              :draw_coverage,
+              :draw_number_of_files]
 
 desc "Draw 'lines of code' graph"
 task :draw_loc_graph => :read_csv do
@@ -123,6 +125,48 @@ task :draw_coverage => :read_coverage_csv do
   graph.data('Covered Lines', covered_lines)
   graph.data('Total Lines', total_lines)
   graph.write('coverage.png')
+end
+
+task :draw_number_of_files => :read_csv do
+  number_of_files = []
+
+  @data.each do |row|
+    val = row['Number of Files']
+    number_of_files << val.to_i
+  end
+
+  graph = Gruff::Line.new
+  graph.title = 'Number of Files'
+  graph.center_labels_over_point
+  graph.marker_font_size = 12
+  graph.line_width = 2
+  graph.dot_radius = 3
+  graph.data('Number of Files', number_of_files)
+  graph.write('number_of_files.png')
+end
+
+def get_template
+  file = File.open('index.html.erb', 'rb')
+  file.read
+end
+
+def render
+  @table = []
+  @data.each do |row|
+    @table << [row['Hash'], row['Commit Message']]
+  end
+  ERB.new(get_template).result(binding)
+end
+
+def save(file, content)
+  File.open(file, 'w+') do |f|
+    f.write(content)
+  end
+end
+
+task :render_project_page => :all do
+  html = render
+  save('index.html', html)
 end
 
 

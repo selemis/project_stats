@@ -13,3 +13,6 @@ DEPENDENCIES
   gruff
   rake
   rmagick
+
+BUNDLED WITH
+   1.10.3
