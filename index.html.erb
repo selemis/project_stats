@@ -43,10 +43,11 @@
       <div class="caption">
         <h3>Lines of Code Graph</h3>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-          architecto dicta magnam tempora ullam veniam! Accusantium alias
-          doloremque, doloribus eos facere fugit illo laborum molestias possimus
-          repellendus sit vel voluptates.</p>
+        <p>The graph has the number of lines of code on the vertical axis and
+          the hash commit on the horizontal axis. It displays lines of code,
+          lines of library code, total lines of production code which is the
+          lines of code and the library lines of code, the number of specs lines
+          of code and the number of lines of comments. </p>
       </div>
     </div>
   </div>
@@ -58,10 +59,9 @@
       <div class="caption">
         <h3>Specs Runtime Graph</h3>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-          asperiores at culpa delectus fuga, illum incidunt iure iusto labore
-          mollitia necessitatibus nesciunt obcaecati quidem repellendus
-          sapiente, tenetur ullam vitae voluptate?</p>
+        <p>The graph has the time on the vertical axis and the hash commit on
+          the horizontal axis. The graph display the total time it took to run
+          the specs in each commit</p>
       </div>
     </div>
 
@@ -74,12 +74,11 @@
       <img src="spec_to_prod_ratio.png">
 
       <div class="caption">
-        <h3>Specs to production lines of code ratio graph</h3>
+        <h3>Specs to Production Lines of Code Ratio Graph</h3>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias,
-          aliquam aut corporis cum ea earum enim itaque libero praesentium
-          quaerat quod ratione tempore ullam voluptatibus voluptatum? Aspernatur
-          dolor id laudantium.</p>
+        <p>The graph has the ratio of spec lines of code to total production
+          lines of code on the vertical axis and the hash commit on
+          the horizontal axis.</p>
       </div>
     </div>
   </div>
@@ -91,10 +90,12 @@
       <div class="caption">
         <h3>Code Coverage Graph</h3>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cum
-          delectus dolor fuga in nemo temporibus, totam. Aspernatur dignissimos
-          ducimus error hic, ipsam optio pariatur porro quas totam velit
-          veritatis.</p>
+        <p>The graph displays number of lines of code on the vertical axis and
+          the hash commit on
+          the horizontal axis. The graph displays two lines. The first is the
+          number of lines of code covered by the running specs. The second is
+          the number of total lines of production code.
+        </p>
       </div>
     </div>
 
@@ -107,12 +108,12 @@
       <img src="coverage_ratio.png">
 
       <div class="caption">
-        <h3>Coverage ratio graph</h3>
+        <h3>Coverage Ratio Graph</h3>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque
-          cumque expedita hic illum libero nemo, possimus praesentium quidem.
-          Adipisci assumenda atque culpa doloribus enim numquam rem repellat
-          repudiandae tenetur!</p>
+        <p>The graph has the ratio of production lines of code covered by the
+          running specs to total production
+          lines of code on the vertical axis and the hash commit on
+          the horizontal axis.</p>
       </div>
     </div>
 
@@ -123,12 +124,9 @@
       <img src="number_of_files.png">
 
       <div class="caption">
-        <h3>Number of files graph</h3>
+        <h3>Number of Files Graph</h3>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
-          beatae blanditiis consequatur cum deserunt dignissimos dolores
-          doloribus facere, fugiat fugit iste maxime nisi, quos sit tenetur
-          totam vel. Aliquid, at!</p>
+        <p>Simple bar graph that displays the number of file per commit</p>
       </div>
     </div>
 
@@ -157,7 +155,10 @@
     <th>Application Lines</th>
     <th>Library Lines</th>
     <th>Spec Lines</th>
-    <th>Comments Count</th>
+    <th>Comment Lines</th>
+    <th>Number of Files</th>
+    <th>Covered Lines</th>
+    <th>Total Lines</th>
   </tr>
 
   <% @table.each do |row| %>
@@ -182,6 +183,15 @@
         </td>
         <td>
           <%= row[6] %>
+        </td>
+        <td>
+          <%= row[7] %>
+        </td>
+        <td>
+          <%= row[8] %>
+        </td>
+        <td>
+          <%= row[9] %>
         </td>
       </tr>
   <% end %>

@@ -5,6 +5,10 @@ require 'erb'
 
 task :default => :all
 
+
+class DataRow < Struct.new(:hash, :commit_message, :spec_runtime, :application_lines, :library_lines, :spec_lines, :comment_lines, :covered_lines, :total_lines, :number_of_files)
+end
+
 desc 'Draw all types of graphs'
 task :all => [:draw_loc_graph,
               :draw_spec_runtime_graph,
@@ -135,12 +139,12 @@ task :draw_number_of_files => :read_csv do
     number_of_files << val.to_i
   end
 
-  graph = Gruff::Line.new
+  graph = Gruff::Bar.new
   graph.title = 'Number of Files'
   graph.center_labels_over_point
   graph.marker_font_size = 12
-  graph.line_width = 2
-  graph.dot_radius = 3
+  # graph.line_width = 2
+  # graph.dot_radius = 3
   graph.data('Number of Files', number_of_files)
   graph.write('number_of_files.png')
 end
@@ -152,16 +156,32 @@ end
 
 def render
   @table = []
+  data_rows = []
+
   @data.each do |row|
-    @table << [row['Hash'],
-               row['Commit Message'],
-               row['Spec Runtime'],
-               row['Application Lines'],
-               row['Library Lines'],
-               row['Spec Lines'],
-               row['Comments Count']
-    ]
+    dr = DataRow.new
+    dr.hash= row['Hash']
+    dr.commit_message= row['Commit Message']
+    dr.spec_runtime= row['Spec Runtime']
+    dr.application_lines= row['Application Lines']
+    dr.library_lines= row['Library Lines']
+    dr.spec_lines= row['Spec Lines']
+    dr.comment_lines= row['Comments Count']
+    dr.number_of_files = row['Number of Files']
+    # (:hash, :commit_message, :spec_runtime, :application_lines, :library_lines, :spec_lines, :comment_lines, :covered_lines, :total_lines, :number_of_files)
+    data_rows << dr
   end
+
+  @coverage.each do |row|
+    dr = data_rows.select { |data_row| data_row.hash == row['Hash'] }.first
+    dr.covered_lines = row['Covered Lines']
+    dr.total_lines = row['Total Lines']
+  end
+
+  data_rows.each do |dr|
+    @table << [dr.hash, dr.commit_message, dr.spec_runtime, dr.application_lines, dr.library_lines, dr.spec_lines, dr.comment_lines, dr.number_of_files, dr.covered_lines, dr.total_lines]
+  end
+
   ERB.new(get_template).result(binding)
 end
 
