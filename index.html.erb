@@ -1,81 +1,148 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Project Page</title>
 
-<style type="text/css">
-	.TFtable{
-		width:100%; 
-		border-collapse:collapse; 
-	}
-	.TFtable td{ 
-		padding:7px; border:#4e95f4 1px solid;
-	}
-	/* provide some minimal visual accomodation for IE8 and below */
-	.TFtable tr{
-		background: #b8d1f3;
-	}
-	/*  Define the background color for all the ODD background rows  */
-	.TFtable tr:nth-child(odd){ 
-		background: #b8d1f3;
-	}
-	/*  Define the background color for all the EVEN background rows  */
-	.TFtable tr:nth-child(even){
-		background: #dae5f4;
-	}
-</style>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Project Page</h1>
+
+    <p>This generated page visualizes project data in various types of graphs.
+      The goal is to display metrics over the evolution of the project</p>
+  </div>
+</div>
 
 
-<table width="500" border="0" cellpadding="5">
+<div class="page-header">
+  <div class="container">
+    <h1>Graphs and Visualations</h1>
+  </div>
+</div>
 
-  <tr>
+<div class="row">
+  <div class="col-sm-6 col-md-6">
+    <div class="thumbnail">
+      <img src="loc.png">
 
-    <td align="center" valign="center">
-      <img src="loc.png" width="600"/>
-      <br/>
-      Lines of code
-    </td>
+      <div class="caption">
+        <h3>Lines of Code Graph</h3>
 
-    <td align="center" valign="center">
-      <img src="spec_run_time.png" width="600"/>
-      <br/>
-      Spec runtime
-    </td>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+          architecto dicta magnam tempora ullam veniam! Accusantium alias
+          doloremque, doloribus eos facere fugit illo laborum molestias possimus
+          repellendus sit vel voluptates.</p>
+      </div>
+    </div>
+  </div>
 
-  </tr>
+  <div class="col-sm-6 col-md-6">
+    <div class="thumbnail">
+      <img src="spec_run_time.png">
 
-  <tr>
+      <div class="caption">
+        <h3>Specs Runtime Graph</h3>
 
-    <td align="center" valign="center">
-      <img src="spec_to_prod_ratio.png" width="600"/>
-      <br/>
-      Spec to prod ration
-    </td>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+          asperiores at culpa delectus fuga, illum incidunt iure iusto labore
+          mollitia necessitatibus nesciunt obcaecati quidem repellendus
+          sapiente, tenetur ullam vitae voluptate?</p>
+      </div>
+    </div>
 
-    <td align="center" valign="center">
-      <img src="coverage.png" width="600"/>
-      <br/>
-      Coverage
-    </td>
+  </div>
+</div>
 
-  </tr>
+<div class="row">
+  <div class="col-sm-6 col-md-6">
+    <div class="thumbnail">
+      <img src="spec_to_prod_ratio.png">
 
-  <tr>
+      <div class="caption">
+        <h3>Specs to production lines of code ratio graph</h3>
 
-    <td align="center" valign="center">
-      <img src="coverage_ratio.png" width="600"/>
-      <br/>
-      Coverage ratio
-    </td>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias,
+          aliquam aut corporis cum ea earum enim itaque libero praesentium
+          quaerat quod ratione tempore ullam voluptatibus voluptatum? Aspernatur
+          dolor id laudantium.</p>
+      </div>
+    </div>
+  </div>
 
-    <td align="center" valign="center">
-      <img src="number_of_files.png" width="600"/>
-      <br/>
-      Number of Files
-    </td>
+  <div class="col-sm-6 col-md-6">
+    <div class="thumbnail">
+      <img src="coverage.png">
 
-  </tr>
+      <div class="caption">
+        <h3>Code Coverage Graph</h3>
 
-</table>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cum
+          delectus dolor fuga in nemo temporibus, totam. Aspernatur dignissimos
+          ducimus error hic, ipsam optio pariatur porro quas totam velit
+          veritatis.</p>
+      </div>
+    </div>
 
-<table class="TFtable">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-6">
+    <div class="thumbnail">
+      <img src="coverage_ratio.png">
+
+      <div class="caption">
+        <h3>Coverage ratio graph</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque
+          cumque expedita hic illum libero nemo, possimus praesentium quidem.
+          Adipisci assumenda atque culpa doloribus enim numquam rem repellat
+          repudiandae tenetur!</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-6 col-md-6">
+    <div class="thumbnail">
+      <img src="number_of_files.png">
+
+      <div class="caption">
+        <h3>Number of files graph</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+          beatae blanditiis consequatur cum deserunt dignissimos dolores
+          doloribus facere, fugiat fugit iste maxime nisi, quos sit tenetur
+          totam vel. Aliquid, at!</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Project Data Table</h1>
+  </div>
+</div>
+
+<table class="table table-striped">
 
   <tr>
     <th>
@@ -84,6 +151,13 @@
     <th>
       Commit Message
     </th>
+    <th>
+      Specs Runtime
+    </th>
+    <th>Application Lines</th>
+    <th>Library Lines</th>
+    <th>Spec Lines</th>
+    <th>Comments Count</th>
   </tr>
 
   <% @table.each do |row| %>
@@ -94,8 +168,28 @@
         <td>
           <%= row[1] %>
         </td>
+        <td>
+          <%= row[2] %>
+        </td>
+        <td>
+          <%= row[3] %>
+        </td>
+        <td>
+          <%= row[4] %>
+        </td>
+        <td>
+          <%= row[5] %>
+        </td>
+        <td>
+          <%= row[6] %>
+        </td>
       </tr>
   <% end %>
 </table>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
 </html>

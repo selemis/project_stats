@@ -153,7 +153,14 @@ end
 def render
   @table = []
   @data.each do |row|
-    @table << [row['Hash'], row['Commit Message']]
+    @table << [row['Hash'],
+               row['Commit Message'],
+               row['Spec Runtime'],
+               row['Application Lines'],
+               row['Library Lines'],
+               row['Spec Lines'],
+               row['Comments Count']
+    ]
   end
   ERB.new(get_template).result(binding)
 end
