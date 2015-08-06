@@ -1,24 +1,48 @@
 Hash,Comments Count,Library Lines,Application Lines,Spec Lines,Spec Runtime,Number of Files,Commit Message
-a37caaa,2,0,8,30,0.03332,3,accounting entry validations
-f892043,2,0,8,30,0.036,3,enabling code coverage
-84af283,2,0,17,80,0.0853,4,implementing balance for account
-07a7276,2,0,29,89,0.09068,4,balance until a date
-f3e946b,2,0,66,140,0.12149,4,implementing credits / debits in progress
-7499aab,2,0,72,193,0.33683,4,calculating credits and debits until a date
-048fd53,2,0,64,192,0.17395,4,refactoring: extracted some blocks to methods in account class
-8aecd3b,2,0,64,192,0.36831,4,extracted debit credit process flow
-3ad8e36,2,0,64,138,0.17135,4,extracted account assertable
-68ea437,6,38,65,182,0.35839,5,started accounting transaction
-c7131bb,6,49,64,244,0.70627,5,saving transactions
-0303781,6,49,64,241,0.56063,5,extracted transaction spec helper methods
-106f44b,6,0,121,245,0.59214,5,Transaformed Accounting Transaction to Active Record Object
-4256a8c,8,0,127,298,1.2,5,accounting transaction requires 2 entries and a book date
-b069952,8,0,127,314,1.24,5,commented a failing test for checking later
-9647880,8,0,127,318,1.62,5,Commented tests. Looking for the correct validations
-6dfd016,11,0,147,395,0.89058,5,got debits equal credits validation for accounting transaction
-43d919d,6,0,120,388,0.93306,5,cleaned up transaction by removing place method
-965f121,6,0,118,386,1.34,5,minor refactoring
-f6c84ad,14,0,139,387,0.71424,10,started breaking case statemeth with polymorphism
-dfd37f7,7,0,164,387,0.8078,10,broke account case statements
-b1a40b5,4,0,168,387,0.72525,10,used block to eliminate duplication in account class
-0a3b747,5,0,232,387,0.71651,10,broke accounting_entry account category central check
+a37caaa,2,0,8,30,0.03398,3,accounting entry validations
+f892043,2,0,8,30,0.03411,3,enabling code coverage
+84af283,2,0,17,80,0.08464,4,implementing balance for account
+07a7276,2,0,29,89,0.08742,4,balance until a date
+f3e946b,2,0,66,140,0.12033,4,implementing credits / debits in progress
+7499aab,2,0,72,193,0.16962,4,calculating credits and debits until a date
+048fd53,2,0,64,192,0.36665,4,refactoring: extracted some blocks to methods in account class
+8aecd3b,2,0,64,192,0.18966,4,extracted debit credit process flow
+3ad8e36,2,0,64,138,0.36349,4,extracted account assertable
+68ea437,6,38,65,182,0.41958,5,started accounting transaction
+c7131bb,6,49,64,244,0.43805,5,saving transactions
+0303781,6,49,64,241,0.28969,5,extracted transaction spec helper methods
+106f44b,6,0,121,245,0.56557,5,Transaformed Accounting Transaction to Active Record Object
+4256a8c,8,0,127,298,0.62915,5,accounting transaction requires 2 entries and a book date
+b069952,8,0,127,314,0.6235,5,commented a failing test for checking later
+9647880,8,0,127,318,0.61761,5,Commented tests. Looking for the correct validations
+6dfd016,11,0,147,395,0.66913,5,got debits equal credits validation for accounting transaction
+43d919d,6,0,120,388,0.65564,5,cleaned up transaction by removing place method
+965f121,6,0,118,386,0.66423,5,minor refactoring
+f6c84ad,14,0,139,387,0.65615,10,started breaking case statemeth with polymorphism
+dfd37f7,7,0,164,387,0.66562,10,broke account case statements
+b1a40b5,4,0,168,387,0.6643,10,used block to eliminate duplication in account class
+0a3b747,5,0,232,387,0.67754,10,broke accounting_entry account category central check
+20075a3,5,46,137,387,0.6649,12,extracted account behavior to modules
+dd126eb,5,57,137,416,0.71169,13,pay expenses started
+1921ff1,5,60,137,456,0.76312,13,self yield pay expense
+ea60608,5,73,137,481,0.81097,14,validator from the from account of expense payment
+7b145fb,7,88,137,503,0.8094,15,pay expense validations
+77fc2d4,7,88,137,499,1.65,15,refactoring make payment spec
+b30619b,7,88,137,499,1.66,15,moving classes
+0eeaff9,9,130,137,573,1.25,18,make revenue transaction use case
+b0639ca,9,133,137,573,0.92919,18,minor refactoring for validators
+981e93e,5,125,137,573,0.93828,19,refactoring: account validators with metaprogramming
+817b2bf,5,125,137,492,0.67865,19,deleted spec code that double checks and talks to db
+bd87a75,43,117,137,492,0.69616,20,refactoring: extracted common behavior in MakeAccountingTransaction
+9d13624,5,117,137,492,0.69037,20,deleted commeted code
+cdf768f,5,117,137,489,0.71099,20,specs refactoring
+7b2e603,5,117,137,489,0.68634,20,minor refactoring
+199b2a7,5,117,137,572,0.68795,20,minor refactoring
+306d656,5,117,137,572,0.69384,20,Merge branch 'master' of selemis.home.dyndns.org:git_repos/homekeeping
+1bfbcf6,3,118,142,544,0.70829,20,book dates syncronized
+354bc4a,3,126,142,626,0.80948,21,Assets to Assets transaction
+f36d6c4,3,126,142,575,0.81638,21,extracted transaction makers required fields specs
+01531ae,3,126,142,563,0.80102,21,removing duplication from transaction maker specs
+e091f5f,3,126,142,546,0.79599,21,extracted common specs code
+83d6f4d,3,126,142,547,0.7959,21,specs refactoring
+bf49f79,3,126,142,531,0.79923,21,specs refactoring
